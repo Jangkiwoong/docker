@@ -11,8 +11,5 @@ WORKDIR /app
 # JAR 파일 복사
 COPY ${JAR_FILE} docker-springboot.jar
 
-# 애플리케이션이 사용하는 포트 노출
-EXPOSE 9000
-
 # 애플리케이션 실행
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "docker-springboot.jar"]
